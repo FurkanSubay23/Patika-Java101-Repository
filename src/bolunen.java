@@ -10,9 +10,9 @@ public class bolunen {
 
         }
         System.out.println("------------------------");
-        System.out.println("3 e ve 4 e bolunen sayilar");
+        System.out.println("3 e ve 5 e bolunen sayilar");
         for (int i =1; i<=k; i++){
-            if (i % 3 == 0 && i % 4 == 0){
+            if (i % 3 == 0 && i % 5 == 0){
                 System.out.println(i);
                 a+=i;
                 b++;
