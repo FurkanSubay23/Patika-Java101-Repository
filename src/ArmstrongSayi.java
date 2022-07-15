@@ -11,13 +11,13 @@ public class ArmstrongSayi {
         }while (sayi <=0);
 
         while (sanal !=0){
-            total = (sanal % 10);
-            sanal = sanal / 10;
+            total = (sanal % 10);           //10 a bölümünden kalanı ekle.
+            sanal = sanal / 10;             //Durmadan 10 a böl ve basamaklara ayır.
             System.out.print(" "+total);
             sayac++;
         }
         System.out.println();
-        System.out.println(sayac);
+        System.out.println(sayac+" Basamaklidir.");
 
         sanal = sayi;
         while (sanal !=0){
@@ -25,9 +25,9 @@ public class ArmstrongSayi {
             sanal /=10;
             k=1;
             for (int i =1; i<=sayac; i++){
-                k*=basamak;
+                k*=basamak;                     //Üslerini al.
             }
-            System.out.println(k);
+            System.out.println(k);              //Basamak üs alınmışını yazdır.
             usler += k;
         }
         System.out.println(usler);
