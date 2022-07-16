@@ -21,7 +21,7 @@ public class Elmas {
                for (int j=0; j<sayi-i; j++){    //Kaç tane boşluk atmak ıcın girer. İlk başta boşluk olsada i ye bağlı olacağı için ilk for un altına yazılır.Yukarının tam tersi.
                    System.out.print(" ");
                }
-               for (int k=2*(i-1)+1; k>=1; k--){    ////Kaç tane * gelicek belli eder.İ ye bağlı attığımız ıcın onu kullanırız.
+               for (int k=2*(i-1)+1; k>=1; k--) {    ////Kaç tane * gelicek belli eder.İ ye bağlı attığımız ıcın onu kullanırız.
                    System.out.print("*");
                }
                System.out.println();
