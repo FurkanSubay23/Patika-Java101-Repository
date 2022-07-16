@@ -2,7 +2,7 @@ import java.util.Scanner;
 public class MinMax {
     public static void main(String[] args) {
         Scanner input=new Scanner(System.in);
-        int max=Integer.MIN_VALUE,min=Integer.MAX_VALUE,n1;     // min ve max değerlerine yüksek tutuyoruzki, min max ı bulalım.
+        int max=Integer.MIN_VALUE,min=Integer.MAX_VALUE,n1;     // min ve max değerlerine yüksek tutuyoruz ki, min max ı bulalım.
         System.out.println("bir sayi giriniz");
         int sayi= input.nextInt();
         for (int i=1; i<=sayi; i++){
