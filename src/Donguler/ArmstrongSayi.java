@@ -1,3 +1,5 @@
+package Donguler;
+
 import java.util.Scanner;
 public class ArmstrongSayi {
     public static void main(String[] args) {
