@@ -17,12 +17,14 @@ public class HesapM {
        ///////////////////////
        static void minus(){
            Scanner scan = new Scanner(System.in);
-           int result = 0,number = 0, i = 0,minus =0;
+           int result = 0,number = 0, i = 1,minus =0;
            System.out.println("Enter big number");
            int big = scan.nextInt();
            while (big>number && minus<=big){
                System.out.println("Enter number for minus");
                number = scan.nextInt();
+               if (number == 0)
+                   break;
                System.out.print(i++ +".number");
                minus+=number;
                if (minus>big){
@@ -98,8 +100,6 @@ public class HesapM {
 
 
     }
-
-
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         int select;
