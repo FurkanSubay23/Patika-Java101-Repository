@@ -70,6 +70,34 @@ public class HesapM {
     }
     /////////////////////////////////////////
 
+    static void exponantial(){
+    Scanner scan = new Scanner(System.in);
+    int us = 1, number,usDeger;
+        System.out.print("Bir sayi gir: ");
+        number = scan.nextInt();
+        System.out.println();
+        System.out.print("Us degerini gir");
+        usDeger = scan.nextInt();
+        for (int i = 1; i<=usDeger; i++){
+            us*=number;
+        }
+        System.out.println("Girdiginiz sayinin degeri: "+us);
+
+    }
+    //////////////////////////////////////////
+
+    static void factorial(){        // Recrusive methodu ile yapım!!!
+        Scanner input = new Scanner(System.in);
+        int fact = 1;
+        System.out.println("which one number do you want factorial: ");
+        int number = input.nextInt();
+      for (int i=1; i<=number; i++){
+          fact*=i;
+      }
+        System.out.println("factorial of the number you entered: "+fact);
+
+
+    }
 
 
     public static void main(String[] args) {
@@ -80,6 +108,8 @@ public class HesapM {
             System.out.println("Select\n1 - Plus\n2 - Minus\n3 - Multiple\n4 - Divide\n5 - Exponantial Calculator\n6 - Factorial");
              select = input.nextInt();
             switch (select){
+                case 0:
+                    System.out.println("Good Bye");
                 case 1:
                     plus();         break;
                 case 2:
@@ -89,6 +119,11 @@ public class HesapM {
                 case 4:
                     divide();       break;
                 case 5:
+                    exponantial();  break;
+                case 6:
+                    factorial();    break;
+                default:
+                    System.out.println("Try Again");
 
             }
         }while (select != 0);
