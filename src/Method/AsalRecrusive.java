@@ -8,7 +8,7 @@ public class AsalRecrusive {
            return;
         } else if (a % i == 0 ) {
             System.out.println(a + " number is  not asal");
-            return;
+            return;         // Method bitiriyor. Methodun breaki gibi.
         }
         asalRecrusive(a,i + 1);
     }
