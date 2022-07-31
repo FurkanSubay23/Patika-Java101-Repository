@@ -3,5 +3,5 @@
 * Pratikler
 * Uygulamalar
 * Ödevler
-## Yapılan bu kodlar için patikaya teşekkürler :)
+## Verilen bu eğitim için patikaya teşekkürler :)
 [Patika Ödevi](www.patika.com)
