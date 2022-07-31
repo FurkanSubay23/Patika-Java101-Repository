@@ -4,4 +4,4 @@
 * Uygulamalar
 * Ödevler
 ## Verilen bu eğitim için patikaya teşekkürler :)
-[Patika Ödevi](www.patika.com)
+[Patika](https://app.patika.dev/paths)
