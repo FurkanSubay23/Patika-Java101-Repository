@@ -11,7 +11,6 @@ public class MineSweeper {
     String[][] list;
     String[][] fakeList;
 
-
     MineSweeper(int row, int colomn) {          // Constructor methodu!
         this.row = row;
         this.colomn = colomn;
@@ -67,7 +66,6 @@ public class MineSweeper {
         }
     }
 
-
     void degerAlma() {
         Scanner scanner = new Scanner(System.in);
         boolean isDeger = true;
@@ -96,22 +94,38 @@ public class MineSweeper {
 
         for (int i = this.satırDeger - 1; i <= this.satırDeger + 1; i++) {
             for (int j = this.sutunDeger - 1; j <= this.sutunDeger + 1; j++) {
+                if ((i < 0 || j < 0 || i >= this.row || j >= this.colomn)) {
+                    continue;
+                }
                 if (Objects.equals(this.list[i][j], "*")) {
                     sayac++;
                     this.fakeList[this.satırDeger][this.sutunDeger] = String.valueOf(sayac);
+                    this.list[this.satırDeger][this.sutunDeger] = String.valueOf(sayac);
+
                 } else if (Objects.equals(this.list[i][j], "-")) {
                     this.fakeList[this.satırDeger][this.sutunDeger] = String.valueOf(sayac);
+                    this.list[this.satırDeger][this.sutunDeger] = String.valueOf(sayac);
+
                 }
             }
         }
     }
 
+    boolean finish(String[][] list) {
+        for (String[] row : list) {
+            for (String column : row) {
+                if (column.equals("-")) {
+                    return false;
+                }
+            }
+        }
+        return true;
+
+    }
 
     void print() {
         matris();
-        Scanner scanner = new Scanner(System.in);
         boolean isPatlama = true;
-        String sayac = String.valueOf(0);
         yazdir(this.list);
         while (isPatlama) {
             System.out.println();
@@ -120,19 +134,22 @@ public class MineSweeper {
             if (!isMayin(this.satırDeger, this.sutunDeger, this.list)) {
                 System.out.println("Game over");
                 isPatlama = false;
+                yazdir(this.list);
+                break;
             }
             if (isMayin(this.satırDeger, this.sutunDeger, this.list)) {
                 //this.fakeList[this.satırDeger][this.sutunDeger] = String.valueOf(sayac);
                 etraf();
-
+                if (finish(this.list)) {
+                    System.out.println("//////////////////Tebrikler kazandiniz!! Party Timeeeeeeee////////////////");
+                    isPatlama = false;
+                    yazdir(this.list);
+                    break;
+                }
             }
             yazdir(this.fakeList);
             System.out.println();
-            yazdir(this.list);
         }
-
-
     }
-
-
 }
+
