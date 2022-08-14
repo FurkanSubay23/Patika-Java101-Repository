@@ -1,4 +1,4 @@
-# Patika-Java-Repository
+# Patika-Java101-Repository
 ## Patika Java Uygulamaları için Yapılan Repository
 * Pratikler
 * Uygulamalar
